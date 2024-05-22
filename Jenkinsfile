@@ -20,10 +20,21 @@ pipeline {
                 sh ' terraform init'
             }
         }
+        stage(' Terraform Format') {
+            steps {
+                sh 'terraform Format '
+            }
+        }
+        stage(' Terraform Validate') {
+            steps {
+                sh 'terraform validate '
+            }
+        }        
         stage(' Terraform Plan') {
             steps {
                 sh 'terraform plan '
             }
+            
         }
         stage('  Terraform Apply') {
             steps {
