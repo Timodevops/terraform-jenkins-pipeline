@@ -20,12 +20,12 @@ pipeline {
                 sh ' terraform init'
             }
         }
-        stage('cd git-cicd &&  Terraform Plan') {
+        stage(' Terraform Plan') {
             steps {
                 sh 'terraform plan '
             }
         }
-        stage('cd git-cicd &&  Terraform Apply') {
+        stage('  Terraform Apply') {
             steps {
                 sh 'terraform apply -auto-approve'
             }
