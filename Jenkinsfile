@@ -22,7 +22,7 @@ pipeline {
         }
         stage(' Terraform Format') {
             steps {
-                sh 'terraform Format '
+                sh 'terraform fnt '
             }
         }
         stage(' Terraform validate') {
